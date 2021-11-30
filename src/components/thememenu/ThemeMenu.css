@@ -1,0 +1,53 @@
+.theme_menu{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    top:0;
+    right: -300px;
+    padding: 22px;
+    z-index: 99;
+    background-color: var(--main-bg);
+    box-shadow: var(--box-shadow);
+    transition: right 0.5s var(--transition-cubic);
+}
+.theme_menu.active{
+    right: 0;
+}
+.theme-menu__close{
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+.theme-menu__select{
+    margin-top: 40px;
+}
+.mode-list{
+    margin-top: 20px;
+}
+.mode-list > li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.mode-list > li ~ li {
+    margin-top: 10px;
+}
+.mode-list__color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+.mode-list__color>i {
+    transform: scale(0);
+    transition: transform 0.5s var(--transition-cubic);
+}
+
+.mode-list__color.active>i {
+    transform: scale(1);
+}
